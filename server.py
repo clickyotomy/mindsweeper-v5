@@ -88,7 +88,7 @@ def home():
     The homepage.
     '''
     now = datetime.now()
-    launch = datetime(2016, 3, 28, 16, 0, 0)
+    launch = datetime(2016, 3, 28, 19, 0, 0)
     begin = now >= launch
     return render_template('home.html', begin=begin)
 
@@ -129,7 +129,7 @@ def login():
     Handle user logins.
     '''
     now = datetime.now()
-    launch = datetime(2016, 3, 27, 16, 0, 0)
+    launch = datetime(2016, 3, 27, 19, 0, 0)
     begin = now >= launch
 
     if begin is False:
