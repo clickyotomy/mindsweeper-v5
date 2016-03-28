@@ -1,0 +1,376 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Karla";
+}
+
+.header {
+    width: 100%;
+    height: 55px;
+    min-width: 1280px;
+    background-color: #333;
+    font-size: 18px;
+    box-shadow: 0px 2px 5px grey;
+}
+
+.menu-separator .octicon{
+    font-size: 11px;
+    padding: 4px;
+    color: azure;
+    vertical-align: 1px;
+}
+
+.left-header {
+    float: left;
+    display: inline-block;
+}
+
+.left-header li {
+    list-style-type: square;
+    display: inline;
+}
+
+.right-header {
+    float: right;
+    padding-right: 40px;
+    display: inline-block;
+}
+
+.right-header li {
+    list-style-type: none;
+    display: inline;
+}
+
+.google-form {
+    border: none;
+    display: inline;
+}
+
+.right-menu-item .google-form .google-search-bar {
+    border: none;
+    height: 23px;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 300px;
+    background-color: #666;
+    font-family: "Karla";
+    font-size: 14px;
+    padding-left: 3px;
+    opacity: 0.8;
+}
+
+.right-menu-item .google-form .google-search-bar:focus {
+    outline: none;
+    opacity: 1;
+
+}
+
+.right-menu-item .octicon-primitive-dot {
+    font-size: 14px;
+    color: springgreen;
+    text-shadow: 0px 0px 2px yellowgreen;
+    padding: 5px;
+    vertical-align: 1px;
+}
+
+.header a {
+    text-decoration: none;
+    color: darkgrey;
+}
+
+.header a:hover,:focus {
+    color: white;
+}
+
+.main-area {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 1280px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-header-text {
+    font-family: "Arvo";
+    color: black;
+    font-size: 32px;
+    width: 500px;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-sidebar-area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1180px;
+    min-width: 1180px;
+    height: 800px;
+    min-height: 800px;
+
+}
+
+.question-form {
+    height: 700px;
+    min-height: 700px;
+    width: 850px;
+    min-width: 850px;
+    float: left;
+    display: inline-block;
+}
+
+.sidebar {
+    height: 700px;
+    min-height: 700px;
+    width: 330px;
+    min-width: 330px;
+    float: right;
+    display: inline-block;
+}
+
+.leaderboard {
+    height: 300px;
+    min-height: 300px;
+    width: 280px;
+    min-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 23px;
+    border: 1px solid darkgrey;
+    border-radius: 3px;
+    overflow-y: scroll;;
+}
+
+.leaderboard-header {
+    color: black;
+    padding: 4px;
+    font-family: "Fira Sans";
+    font-size: 16px;
+    border-bottom: 1px solid darkgrey;
+}
+
+.leaderboard-header .octicon-radio-tower {
+    vertical-align: 1px;
+    font-size: 18px;
+}
+.leaderboard {
+  overflow-y: scroll;
+}
+
+.leaderboard table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout:fixed;
+    width: 260px;
+}
+
+#live-leaderboard table tr{
+    border-top: 1px solid #666;
+}
+
+.leaderboard table th, #live-leaderboard table td {
+    text-align: left;
+    width: 8px;
+    color: #666;
+    padding: 6px 0px;
+}
+
+.leaderboard table th:nth-child(2), #live-leaderboard table td:nth-child(2){
+    width: 30px;
+    color: black;
+}
+
+.leaderboard table th:last-child, #live-leaderboard table td:last-child {
+    text-align: right;
+}
+
+
+#live-leaderboard table .current-user td {
+    color: crimson;
+}
+
+.facebook-moderation {
+    height: 300px;
+    min-height: 300px;
+    width: 280px;
+    min-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.question-image {
+    margin-top: 20px;
+}
+
+.answer-bar {
+    width: 720px;
+    min-width: 720px;
+    height: 150px;
+    min-height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.answer-bar .answer-bar-form {
+    width: 600px;
+    min-width: 600px;
+    height: 80px;
+    min-height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.answer-box .octicon-keyboard {
+    color: black;
+    font-size: 18px;
+}
+
+.answer-text-box {
+    color: black;
+    padding: 4px;
+    border: none;
+    height: 22px;
+    width: 300px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    font-family: "Montserrat";
+    font-size: 13px;
+}
+
+.answer-text-box:focus {
+    outline: none;
+    color: black;
+}
+
+.answer-box-button {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 7px;
+    border-radius: 2px;
+}
+
+.answer-box-button:focus {
+    outline: none;
+    color: black;
+    background-color: gold;
+}
+
+.answer-box-button:hover {
+    border: none;
+    color: black;
+    background-color: gold;
+}
+
+.hint {
+    font-family: "Inconsolata";
+    font-weight: bolder;
+    width: 400px;
+    min-width: 400px;
+    min-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    color: black;
+    padding-top: 12px;
+    margin-top: -50px;
+    border-radius: 3px;
+    overflow: auto;
+}
+
+.hint .octicon-light-bulb {
+    font-size: 13px;
+    vertical-align: 1px;
+    color: black;
+}
+
+.social {
+    width: 400px;
+    min-width: 400px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -60px;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+.footer {
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    min-width: 300px;
+    height: 50px;
+    min-height: 50px;
+    text-align: center;
+    font-family: "Inconsolata";
+    font-size: 13px;
+    color: black;
+}
+
+.footer .octicon-heart {
+    color: crimson;
+    vertical-align: -2px;
+}
+
+.footer .octicon-code {
+    color: dimgrey;
+    vertical-align: -2px;
+}
+
+
+.footer .octicon-bug {
+    color: orangered;
+    vertical-align: -2px;
+}
+
+
+.footer .octicon-mail {
+    color: slategrey;
+    vertical-align: -2px;
+}
+
+.footer .octicon-primitive-dot {
+    color: grey;
+    vertical-align: 1.5px;
+    font-size: 10px;
+}
+
+.zwibe {
+    font-size: 12px;
+    height: 20px;
+    min-height: 20px;
+    width: 200px;
+    min-width: 200px;
+    background-color: gold;
+    color: dimgrey;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6px;
+}
+
+.zwibe a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer a {
+    text-decoration: none;
+}

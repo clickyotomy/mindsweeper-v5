@@ -1,0 +1,135 @@
+body {
+    font-family: "Alegreya";
+    color: black;
+}
+
+.register-container {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 550px;
+    min-height: 550px;
+    width: 600px;
+    min-width: 600px;
+    padding: 20px;
+}
+
+.register-header {
+    font-size: 40px;
+}
+
+.register-text {
+    font-size: 16px;
+    text-align: center;
+}
+
+.register-form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 500px;
+    min-width: 500px;
+    padding: 20px;
+    border: 0.5px dashed black;
+}
+
+.register-form .octicon{
+    font-size: 12px;
+    vertical-align: 6px;
+}
+
+.reg-form-label {
+    display: inline;
+    font-size: 15px;
+    text-align: right;
+    width: 150px;
+    min-width: 150px;
+    float: left;
+}
+
+.reg-form-input {
+    color: black;
+    padding: 2px;
+    font-size: 14px;
+    font-family: "Alegreya";
+    width: 300px;
+    border: none;
+    min-width: 300px;
+    vertical-align: 5px;
+    border: 0.5px solid grey;
+}
+
+.reg-form-input:focus {
+    outline: none;
+    color: black;
+    border: 0.5px solid skyblue;
+}
+
+.register-button {
+    font-family: "Alegreya";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    background-color: gold;
+    padding: 6px;
+}
+
+.register-button:focus {
+    outline: none;
+    background-color: yellowgreen;
+}
+
+.register-button:hover {
+    border: none;
+    background-color: yellowgreen;
+}
+
+.validate-error {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Inconsolata";
+    width: 250px;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 4px;
+    text-align: center;
+    border: 1px dotted crimson;
+}
+
+.validate-error .octicon-x {
+    font-size: 11px;
+    vertical-align: -0.5px;
+    color: red;
+}
+
+.confirm {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Inconsolata";
+    font-size: 12px;
+    background-color: black;
+    padding: 2px 1px 2px 1px;
+    border-radius: 2px;
+    width: 200px;
+    min-width: 200px;
+    color: white;
+}
+
+.confirm .octicon-check {
+    font-size: 11px;
+    padding: 1px;
+    color: greenyellow;
+}
+
+a {
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+a:hover,:focus {
+    border: none;
+    outline: none;
+}

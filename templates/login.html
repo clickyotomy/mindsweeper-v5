@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/octicons/octicons.css')  }}">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Alegreya|Karla|Arvo|Montserrat|Inconsolata">
+        <title>Login -- Mindsweeper v5.0</title>
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="login-header">Mindsweeper v5.0 - Login</div><br>
+            <div class="login-text">You have to login to play the game. Please enter the correct credentials that you provided during the <a href="/register" target="_blank" title="Register for Mindsweeper!">registration</a>.</div><br>
+            {% if force == True %}
+                <div class="force-login">
+                    <span class="octicon octicon-question"></span>
+                    You're logged in as <b>{{ username|safe }}</b>, would you like to login as someone else?<br>No? Resume playing <a class="resume" href="{{ resume|safe }}" style="color: aliceblue;">here</a>.
+
+                </div>
+                <br>
+            {% endif %}
+            <div class="login-form">
+                <form action="/login" method="POST">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                    <div class="login-form-label">username</div><input class="login-form-input" type="text" name="username" required autofocus placeholder="Registered username." title="The username that was provided by you during registration."/>&nbsp;&nbsp;<span class="octicon octicon-jersey"></span><br>
+                    <div class="login-form-label">password</div><input class="login-form-input" type="password" name="password" required placeholder="Passwords are case sensitive." title="The corresponding password for the username entered above."/>&nbsp;&nbsp;<span class="octicon octicon-key"></span><br><br>
+                    <input class="login-button" type="submit" value="login">
+                </form>
+            </div>
+            <br>
+            {% if error == True %}
+                <div class="login-error"><span class="octicon octicon-issue-opened"></span>&nbsp;Invalid login credentials.</div>
+            {% endif %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,325 @@
+{
+    "levels":[
+        {
+            "level":1,
+            "title":"Utsav",
+            "source_hint":"Really? A source hint for this?",
+            "is_image":true,
+            "clickable":true,
+            "answer_bar":false,
+            "answers":[
+
+
+            ],
+            "media_url":"images/utsav-poster.png"
+        },
+        {
+            "level":2,
+            "title":"Roadrunner",
+            "source_hint":"Well? What do you have to do?",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "beepbeep",
+                "honk"
+            ],
+            "media_url":"images/horn-ok-please.png"
+        },
+        {
+            "level":3,
+            "title":"Holi",
+            "source_hint":"That's what you are supposed to listen to over the weekend.",
+            "is_image":false,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "coldplay"
+            ],
+            "media_url":"https://www.youtube.com/embed/23NAA9q2Hh0"
+        },
+        {
+            "level":4,
+            "title":"Answer",
+            "source_hint":"Are you reading closely?",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "dostoyevsky"
+            ],
+            "media_url":"images/mr-vutkur.png"
+        },
+        {
+            "level":5,
+            "title":"Not upload",
+            "source_hint":"Dots and dashes.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "the last utsav",
+                "last utsav"
+            ],
+            "media_url":"images/ugb.png"
+        },
+        {
+            "level":6,
+            "title":"Zwibe",
+            "source_hint":"Zwibe is our Utsav's fashion partner. We wear pretty clothes.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "facebook id"
+            ],
+            "media_url":"images/facebook-id.jpg"
+        },
+        {
+            "level":7,
+            "title":"Riddle me that",
+            "source_hint":"The answer is shown. Who asks the question?",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "sphinx"
+            ],
+            "media_url":"images/vitruvian-man.png"
+        },
+        {
+            "level":8,
+            "title":"Blaze Through",
+            "source_hint":"The terms and conditions of Mindsweeper.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "i agree"
+            ],
+            "media_url":"images/redacted.png"
+        },
+        {
+            "level":9,
+            "title":"Fire Department",
+            "source_hint":"I'm not afraid.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "ghostbusters"
+            ],
+            "media_url":"images/casper.png"
+        },
+        {
+            "level":10,
+            "title":"Facepalm",
+            "source_hint":"What's here?",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "drumpf tower"
+            ],
+            "media_url":"images/trump-tower.png"
+        },
+        {
+            "level":11,
+            "title":"We grew longer",
+            "source_hint":"Yeah! Science, bitch!",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "ligo"
+            ],
+            "media_url":"images/mirror-q.png"
+        },
+        {
+            "level":12,
+            "title":"Zwibe",
+            "source_hint":"Zwibe is our Utsav's fashion partner. We wear pretty clothes.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "check it out"
+            ],
+            "media_url":"images/check-it-out.jpg"
+        },
+        {
+            "level":13,
+            "title":"Maze",
+            "source_hint":"Choose a side.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "batman",
+                "superman"
+            ],
+            "media_url":"images/bvs.png"
+        },
+        {
+            "level":14,
+            "title":"Maze",
+            "source_hint":"Is the cat walking upstairs or downstairs?",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "upstairs",
+                "downstairs"
+            ],
+            "media_url":"images/catwalk.png"
+        },
+        {
+            "level":15,
+            "title":"Maze",
+            "source_hint":"We're going to need a bigger boat.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "a",
+                "b"
+            ],
+            "media_url":"images/dog-pants.png"
+        },
+        {
+            "level":16,
+            "title":"Maze",
+            "source_hint":"What colour's the dress?",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+
+            ],
+            "media_url":"images/dress-pic.png"
+        },
+        {
+            "level":17,
+            "title":"Maze",
+            "source_hint":"What kind of person are you?",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+
+            ],
+            "media_url":"images/os.png"
+        },
+        {
+            "level":18,
+            "title":"Maze",
+            "source_hint":"Choose one",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "aom",
+                "age of mythology"
+            ],
+            "media_url":"images/aom-aoe.png"
+        },
+        {
+            "level":19,
+            "title":"Maze",
+            "source_hint":"What kind of person are you?",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+
+            ],
+            "media_url":"images/hf-he.png"
+        },
+        {
+            "level":20,
+            "title":"Out of the Maze!",
+            "source_hint":"Zwibe is our Utsav's fashion partner. We wear pretty clothes.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "ads"
+            ],
+            "media_url":"images/ads.jpg"
+        },
+        {
+            "level":21,
+            "title":"Django",
+            "source_hint":"I like the way you die boy!",
+            "is_image":false,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "i like the way you ie boy"
+            ],
+            "media_url":"https://www.youtube.com/embed/R2VgPdS7UOM"
+        },
+        {
+            "level":22,
+            "title":"Bindra",
+            "source_hint":"I want a piece of you.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "my thumb",
+                "my right thumb",
+                "thumb"
+            ],
+            "media_url":"images/digit.png"
+        },
+        {
+            "level":23,
+            "title":"Freud",
+            "source_hint":"Brought to you by the 'man' who couldn't keep it in his pants.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "oedipus"
+            ],
+            "media_url":"images/decode-me.png"
+        },
+        {
+            "level":24,
+            "title":"Numbers",
+            "source_hint":"Find me.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "8161923"
+            ],
+            "media_url":"images/osiris.png"
+        },
+        {
+            "level":25,
+            "title":"Zwibe",
+            "source_hint":"Zwibe is our Utsav's fashion partner. We wear pretty clothes.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "kitsch mandi"
+            ],
+            "media_url":"images/kitsch-mandi.jpg"
+        },
+        {
+            "level":26,
+            "title":"Finale",
+            "source_hint":"Your move, Captain.",
+            "is_image":true,
+            "clickable":false,
+            "answer_bar":true,
+            "answers":[
+                "i won"
+            ],
+            "media_url":"images/play-me.png"
+        }
+    ]
+}

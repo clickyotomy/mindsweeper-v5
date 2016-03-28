@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Congrulations! -- Mindsweeper v5.0</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/finish.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/octicons/octicons.css')  }}">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Alegreya|Karla|Arvo|Montserrat|Inconsolata">
+    </head>
+    <body>
+        <div class="content">
+            <h1>Mindsweeper v5.0</h1>
+            <p>Thank you for playing Mindsweeper.</p>
+            <p>You have completed the treasure hunt. Congratulations, <b>{{ username|safe }}</b>!</p>
+            <p>-- <em>See you at Utsav 2016.</em> --</p>
+            <p><a href="/">home</a><span class="octicon octicon-primitive-dot"></span>
+<a href="/logout">log-out</a></p>
+        </div>
+    </body>
+</html>

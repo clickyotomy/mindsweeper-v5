@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Register -- Mindsweeper v5.0</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/register.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/octicons/octicons.css')  }}">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Alegreya|Karla|Arvo|Montserrat|Inconsolata">
+    </head>
+    <body>
+        <div class="register-background"></div>
+        <div class="register-container">
+            <h1 class="register-header">Mindsweeper v5.0 - Register</h1>
+            <p class="register-text">This is the registration page for <a href="/"><b>Mindsweeper</b></a>. Create an account for yourself or your team. There is no need for multiple accounts for individual players; a single account for will suffice for a team. User/team logins are required to track the progress, and maintain leader-boards.<br>There is no way to <em>recover/reset passwords or delete accounts</em>. You will have to <em>register again and start afresh</em> if you forget your login credentials. Session cookies will expire in 12 hours, you will be required login again.</p><br>
+            <div class="register-form">
+                <form action="/register" method="POST">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                    <div class="reg-form-label">username</div><input class="reg-form-input" type="text" name="username" required autofocus pattern=".{6,20}" title="The length of username must be in the range of {min: 6, max: 20} characters." placeholder="Account name for the team/player."/>&nbsp;&nbsp;<span class="octicon octicon-jersey"></span><br>
+                    <div class="reg-form-label">password</div><input class="reg-form-input" type="password" name="password" required pattern=".{8,}" title="The minumum length of the password must be eight characters." placeholder="Should be eight characters long, at least."/>&nbsp;&nbsp;<span class="octicon octicon-key"></span><br>
+                    <div class="reg-form-label">confirm-password</div><input class="reg-form-input" type="password" name="confirm" required pattern=".{8,}" title="The minumum length of the password must be characters; it should match the password entered above." placeholder="Should match with what you entered above."/>&nbsp;&nbsp;<span class="octicon octicon-lock"></span>
+                    <div class="reg-form-label">phone-number</div><input class="reg-form-input" type="text" name="phone-number" required pattern=".{10,}" title="Please enter a valid phone number." placeholder="Enter a valid phone number."/>&nbsp;&nbsp;<span class="octicon octicon-device-mobile"></span><br><br>
+                    <input class="register-button" type="submit" value="register"/>
+                    <br>
+                </form>
+            </div>
+            <br>
+            {% if error != None %}
+                <div class="validate-error">
+                    <span class="octicon octicon-x"></span>&nbsp;{{ error|safe }}
+                </div>
+                <br>
+            {% endif %}
+            {% if thanks == True %}
+                <div class="confirm"><span class="octicon octicon-check"></span>&nbsp;Thank you for registering!</div>
+                <br>
+            {% endif %}
+            <div class="login">If you have registered aready, <a href="/login">start playing.</a></div>
+        </div>
+    </body>
+</html>

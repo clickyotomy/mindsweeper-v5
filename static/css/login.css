@@ -1,0 +1,150 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: "Alegreya";
+}
+
+.login-container {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 480px;
+    min-height: 480px;
+    width: 480px;
+    min-width: 480px;
+    padding: 20px;
+}
+
+.login-header {
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    min-width: 500px;
+    font-weight: bold;
+}
+
+.login-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+a:hover {
+    background-color: black;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: white;
+}
+
+.force-login {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    width: 300px;
+    background-color: yellowgreen;
+    border-radius: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+.force-login .octicon-question {
+    font-size: 12px;
+}
+
+.login-form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 400px;
+    min-width: 400px;
+    padding: 20px;
+    border: 1px dashed darkgrey;
+}
+
+.login-form .octicon {
+        font-size: 13px;
+        vertical-align: 4px;
+        padding-left: 2px;
+}
+
+.login-form-label {
+    display: inline;
+    font-size: 15px;
+    text-align: center;
+    width: 150px;
+    min-width: 150px;
+    float: left;
+}
+
+.login-form-input {
+    color: black;
+    padding: 2px;
+    font-size: 14px;
+    font-family: "Alegreya";
+    width: 180px;
+    border: none;
+    min-width: 180px;
+    vertical-align: 5px;
+    border: 1px dotted grey;
+}
+
+.login-form-input:focus {
+    outline: none;
+    color: black;
+    border: 1px dotted black;
+}
+
+.login-button {
+    font-family: "Alegreya";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    background-color: skyblue;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.login-button:focus {
+    color: white;
+    outline: none;
+    background-color: black;
+}
+
+.login-button:hover {
+    color: white;
+    border: none;
+    background-color: black;
+}
+
+.login-error {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "Inconsolata";
+    font-size: 12px;
+    border-radius: 2px;
+    width: 200px;
+    min-width: 200px;
+    border: 0.5px dotted red;
+    padding: 4px;
+}
+
+.login-error .octicon-issue-opened {
+    size: 12px;
+    vertical-align: -1px;
+    color: crimson;
+}

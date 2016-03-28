@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>#{{ level|safe }}. {{ title|safe }} -- Mindsweeper v5.0</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/question.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/octicons/octicons.css')  }}">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Alegreya|Karla|Arvo|Montserrat|Inconsolata">
+        <script src="{{ url_for('static', filename='scripts/leaderboard.js') }}" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- Facebook stuff starts here. -->
+        <div id="fb-page"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1441055302802457";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1441055302802457";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- Facebook stuff ends here. -->
+        <div class="header">
+            <ul class="left-header">
+                <li class="left-menu-item"><a href="/" title="Home" target="_blank"><span class="octicon octicon-home"></span></a></li>
+                <li class="menu-separator"><span class="octicon octicon-primitive-dot"></span></li>
+                <li class="left-menu-item"><a href="/rules" title="Rules/FAQ" target="_blank"><span class="octicon octicon-info"></span></a></li>
+                <li class="menu-separator"><span class="octicon octicon-primitive-dot"></span></li>
+                <li class="left-menu-item">Mindsweeper v5.0&nbsp;-&nbsp;Utsav 2016</li>
+                <li class="menu-separator"><span class="octicon octicon-primitive-dot"></span></li>
+                <li class="left-menu-item"><a href="https://www.facebook.com/events/237585626590435/" title="Discussion Page" target="_blank"><span class="octicon octicon-comment-discussion"></span></a></li>
+                <li class="menu-separator"><span class="octicon octicon-primitive-dot"></span></li>
+                <li class="left-menu-item">
+                    <span style="vertical-align: -6px;">
+                        <a href="https://twitter.com/bmsce_utsav" class="twitter-follow-button" data-show-count="false">Follow @bmsce_utsav</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                        </script>
+                    </span>
+                </li>
+            </ul>
+            <ul class="right-header">
+                <li class="right-menu-item">
+                    <form class="google-form" action="/google" method="POST" target="_blank">
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                        <input class="google-search-bar" type="text" name="google-query" placeholder="Search Google" />
+                    </form>
+                </li>
+                <li class="menu-separator"><span class="octicon octicon-primitive-dot"></span></li>
+                <li class="right-menu-item">{{ username|safe }}<span class="octicon octicon-primitive-dot"></span></li>
+                <li class="right-menu-item"><a class="logout-link" href="/logout" title="Sign Out"><span class="octicon octicon-sign-out"></span></a></li>
+            </ul>
+        </div>
+        <br>
+        <div class="main-area">
+            <div class="question-sidebar-area">
+                <div class="question-form">
+                    {% if is_image == True %}
+                    <img class="question-image" src="{{ media_url|safe }}" width="720" height="480" {% if clickable == True %} usemap="utsav"{% endif %} />
+                    {% if clickable == True %}
+                    <map name="utsav">
+                        <area shape="rect" coords="322,188,393,257" href="/question/moveforward">
+                    </map>
+                    {% endif %}
+                    {% else %}
+                    <iframe width="720" height="480" src="{{ media_url|safe }}" frameborder="0" allowfullscreen></iframe>
+                    {% endif %}
+                    <br>
+                    <div class="answer-bar" {% if answer_bar != True %} style="visibility: hidden;" {% endif %} >
+                        <div class="answer-bar-form">
+                            <form class="answer-box" action="{{ request.path }}" method="POST">
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                                <span class="octicon octicon-keyboard"></span>&nbsp;<input class="answer-text-box" type="text" name="answer" placeholder="Answer" required autofocus>
+                                <input class="answer-box-button" type="submit" value="submit">
+                            </form>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <!-- Interesting stuff begins here. -->
+                        <!-- {{ source_hint|safe }} -->
+                    <!-- Interesting stuff ends here.  -->
+                    <div class="social">
+                        <span class="fb-share-button" data-href="http://104.155.199.197" data-layout="button_count"></span>&nbsp;&nbsp;
+                        <span class="social-item" style="vertical-align: -4px;"><a href="https://twitter.com/share" class="twitter-share-button" data-text="I'm playing Mindsweeper v5.0!" data-via="bmsce_utsav" data-hashtags="Mindsweeper5">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                            </script>
+                        </span>
+                        <br>
+                        <div class="zwibe">
+                            Utsav fashion partner, <a href="https://www.zwibe.me/" target="_blank">Zwibe</a>.
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="leaderboard">
+                        <div class="leaderboard-header"><span class="octicon octicon-radio-tower"></span>&nbsp;&nbsp;Leaderboard</div>
+                        <table>
+                            <tr>
+                                <th>pos.</th>
+                                <th>team</th>
+                                <th>level</th>
+                            </tr>
+                        </table>
+                        <div id="live-leaderboard"></div>
+                    </div>
+                    <br>
+                    <div class="facebook-moderation">
+                    <div class="fb-page" data-href="https://www.facebook.com/utsavbmsce" data-tabs="timeline" data-width="300" data-height="310" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/utsavbmsce"><a href="https://www.facebook.com/utsavbmsce">Utsav</a></blockquote></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+                <span class="octicon octicon-code"></span>&nbsp;with&nbsp;<span class="octicon octicon-heart"></span>&nbsp;using Flask and Redis.<br><br>
+                <a href="mailto:shrinidhi.kaushik@gmail.com"><span class="octicon octicon-bug" title="Report a bug"></span></a>&nbsp;<span class="octicon octicon-primitive-dot"></span>&nbsp;&nbsp;<a href="mailto:gatti.praveen@gmail.com"><span class="octicon octicon-mail" title="Contact Praveen Gatti"></span></a>
+            </div>
+        </div>
+        <div id="hidden-current-user" style="height: 0px; width: 0px; visibility: hidden;">{{ username|safe }}</div>
+    </body>
+    <script type="text/javascript">
+        get_leaderboard();
+    </script>
+</html>

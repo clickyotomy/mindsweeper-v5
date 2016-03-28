@@ -1,0 +1,57 @@
+body {
+    font-family: "Raleway";
+}
+
+.home-container {
+    /*display: block;*/
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 600px;
+    min-width: 600px;
+    padding: 20px;
+    font-family: "Alegreya";
+}
+
+.home-header {
+    font-size: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.note {
+    text-align: center;
+    border: 1px dashed grey;
+    padding: 30px;
+}
+
+.launch .octicon-primitive-dot {
+    color: dimgrey;
+    padding: 6px;
+    font-size: 11px;
+    vertical-align: 1px;
+}
+
+.sign-up {
+    color: darkslategrey;
+}
+
+.begin {
+    color: crimson;
+}
+
+.launch a {
+    text-decoration: none;
+}
+
+.launch a:hover,:focus {
+    border: none;
+    outline: none;
+}
+
+.before {
+    color: black;
+}

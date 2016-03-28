@@ -1,0 +1,30 @@
+body {
+    font-family: "Alegreya";
+    color: black;
+}
+
+.content {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 550px;
+    min-height: 550px;
+    width: 600px;
+    min-width: 600px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+.content .octicon-primitive-dot {
+    padding: 6px;
+    font-size: 11px;
+    color: dimgrey;
+    vertical-align: 2px;
+}

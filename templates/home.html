@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mindsweeper v5.0 -- Utsav 2016</title>
+        <script type="text/javascript" src="{{ url_for('static', filename='scripts/countdown.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/octicons/octicons.css')  }}">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Alegreya|Karla|Arvo|Montserrat|Inconsolata">
+    </head>
+    <body>
+        <!-- Countdown Timer -->
+        <script type="text/javascript">
+            CountDownTimer('3/28/2016 04:00 PM', 'time');
+        </script>
+        <div class="home-container">
+            <div class="home-header">Mindsweeper v5.0</div>
+            <br>
+            <div class="note">
+                Hello!<br>Welcome to Mindsweeper, the online treasure hunt!<br>Mindsweeper is now 5 years old now. If this is your first time, and you’ve decided to pop your cherry, register now!<br>I’d say we have your curiosity, now let us have your attention.<br>
+            </div>
+            <br>
+            {% if begin == False %}
+            <div>-- <div class="time"></div> --</div>
+            <div class="launch">
+                <a href="/register" target="_blank"><span class="before">sign-up</span></a><span class="octicon octicon-primitive-dot"></span><a href="/rules" target="_blank"><span class="before">rules</span></a>
+            </div>
+            {% else %}
+            <div style="visibility: hidden; height: 0px; width: 0px;">-- <div id="time"></div> --</div>
+            <div class="launch">
+                <a href="/rules" target="_blank"><span class="before">rules</span></a>
+                <span class="octicon octicon-primitive-dot"></span>
+                <a href="/register" target="_blank"><span class="sign-up">sign-up</span></a>
+                <span class="octicon octicon-primitive-dot"></span>
+                <a href="/login" target="_blank"><span class="begin">start-playing</span></a>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
