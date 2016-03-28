@@ -129,9 +129,9 @@ def login():
     Handle user logins.
     '''
     now = datetime.now()
-    launch = datetime(2016, 3, 27, 19, 30, 0)
+    launch = datetime(2016, 3, 28, 19, 30, 0)
     begin = now >= launch
-
+    print(launch, now)
     if begin is False:
         return redirect('/')
 
