@@ -134,6 +134,24 @@ def get_level_data(database, level):
     '''
     raw = database.hget('levels', str(level))
     level_data = pickle.loads(raw)
-    # level_data['url'] = ''.join(['/question', level_data['url']])
     level_data['level'] = str(level_data['level']).zfill(2)
     return level_data
+
+
+def admin(database):
+    '''
+    Admin access to user details.
+    '''
+    response = {'users': []}
+    users = database.hgetall('users')
+    if users is not None:
+        for user in users.values():
+            data = pickle.loads(user)
+            condensed = {
+                'username': data['username'],
+                'contact': data['phone-number'],
+                'level': data['level'],
+                'timestamp': data['timestamp']
+            }
+            response['users'].append(condensed)
+    return response

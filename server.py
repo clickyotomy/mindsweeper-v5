@@ -22,7 +22,7 @@ from flask.ext.login import (LoginManager, current_user, login_user,
 
 from utils import (user_exists, register_user, validate_user,
                    get_level, update_level, awesome_sort, extended_strip,
-                   get_url, get_level_data, get_rev_level)
+                   get_url, get_level_data, get_rev_level, admin)
 
 # Flask stuff: Application name, configuration, secrets, logins, CSRF, etc.
 app = Flask(__name__)
@@ -219,6 +219,18 @@ def done():
     '''
     return render_template('finish.html', username=current_user.id)
 
+
+@app.route('/sudo')
+def sudo():
+    '''
+    Administrator access.
+    '''
+    password = request.args.get('password')
+    if password is not None and password == 'xyzzyspoon!':
+        return jsonify(admin(database))
+
+    else:
+        return jsonify({}), 403
 
 @csrf.include
 @app.route('/question/<path:path>', methods=['GET', 'POST'])
