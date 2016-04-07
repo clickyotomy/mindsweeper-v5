@@ -3,4 +3,8 @@ Mindsweeper v5.0, Utsav 2016
 
 Mindsweeper is the official treasure hunt for Utsav.
 
-The web-application is built using Flask and it's extensions; back-end of the application (storing user and level data) is implemented using redis. As of now, the application is hosted on a free-tier instance of Google Compute Engine. For handling concurrency, the application runs on top of gunicorn.
+The web-application is built using Flask and it's extensions (flask-login, flask-seasurf); the back-end of the application (storing user and level data) is implemented using redis (py-redis SDK). As of now, the application is hosted on a free-tier instance of Google Compute Engine. For handling concurrency, the application runs on top of gunicorn. The front-end of the application is implemented HTML, CSS and a little bit of JavaScript. The HTML pages are rendered using the jinja2 templating engine.
+
+To start the server in production, run startup.sh (change the number of workers for gunicorn accordingly). If you have to run a single instance, run server.py with the debug option set to True for local development/testing.
+
+Note: The CSS was written in a hurry, so please feel free to refactor it.
