@@ -65,7 +65,6 @@ def load_user(username):
 # Redis stuff.
 database = redis.StrictRedis(host='localhost', port=6379, db=0)
 
-
 # Configure the session cookie expiration.
 @app.before_request
 def make_session_permanent():
@@ -206,7 +205,7 @@ def rules():
 @app.route('/youshallnotpass')
 def deadend():
     '''
-    The end.
+    Dead-end/misdirection.
     '''
     return render_template('deadend.html')
 
@@ -309,13 +308,11 @@ def question(path):
                     return redirect(get_url(database, 17))
 
                 if level == 15 and sanitized == 'a':
-                    print('a')
                     if user_level >= 13 and user_level <= 19:
                         update_level(database, current_user.id, 18)
                     return redirect(get_url(database, 18))
 
                 if level == 15 and sanitized == 'b':
-                    print('b')
                     if user_level >= 13 and user_level <= 19:
                         update_level(database, current_user.id, 19)
                     return redirect(get_url(database, 19))
@@ -337,4 +334,4 @@ def question(path):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=False)
