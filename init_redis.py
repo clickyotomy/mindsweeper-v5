@@ -10,25 +10,17 @@ import pickle
 import redis
 
 
-URL_MAPS =  [(1, '/clickme'), (2, '/moveforward'), (3, '/notbhajan'),
-             (4, '/inserthinthere'), (5, '/ugb'), (6, '/zwibe1'),
-             (7, '/answerordie'), (8, '/justmoveforward'),
-             (9, '/callsomeone'), (10, '/ilovethebible'), (11, '/einstein'),
-             (12, '/zwibe2'), (13, '/bvs'), (14, '/upordown'), (15, '/aorb'),
-             (16, '/dress'), (17, '/gameover'), (18, '/onegame'),
-             (19, '/halforfull'), (20, '/zwibe3'), (21, '/candyland'),
-             (22, '/shoot'), (23, '/incest'), (24, '/pieceme'),
-             (25, '/zwibe4'), (26, '/doneandusted')]
+URL_MAPS = [(1, '/clickme'), (2, '/moveforward'), (3, '/notbhajan'),
+            (4, '/inserthinthere'), (5, '/ugb'), (6, '/zwibe1'),
+            (7, '/answerordie'), (8, '/justmoveforward'),
+            (9, '/callsomeone'), (10, '/ilovethebible'), (11, '/einstein'),
+            (12, '/zwibe2'), (13, '/bvs'), (14, '/upordown'), (15, '/aorb'),
+            (16, '/dress'), (17, '/gameover'), (18, '/onegame'),
+            (19, '/halforfull'), (20, '/zwibe3'), (21, '/candyland'),
+            (22, '/shoot'), (23, '/incest'), (24, '/pieceme'),
+            (25, '/zwibe4'), (26, '/doneandusted')]
 
-REV_URL_MAPS = [('/clickme', 1), ('/moveforward', 2), ('/notbhajan', 3),
-                ('/inserthinthere', 4), ('/ugb', 5), ('/zwibe1', 6),
-                ('/answerordie', 7), ('/justmoveforward', 8),
-                ('/callsomeone', 9), ('/ilovethebible', 10), ('/einstein', 11),
-                ('/zwibe2', 12), ('/bvs', 13), ('/upordown', 14),
-                ('/aorb', 15), ('/dress', 16), ('/gameover', 17),
-                ('/onegame', 18), ('/halforfull', 19), ('/zwibe3', 20),
-                ('/candyland', 21), ('/shoot', 22), ('/incest', 23),
-                ('/pieceme', 24), ('/zwibe4', 25), ('/doneandusted', 26)]
+REV_URL_MAPS = [(url[1], url[0]) for url in URL_MAPS]
 
 
 def add_urls(database, hashmap):
