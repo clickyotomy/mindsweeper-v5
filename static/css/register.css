@@ -2,133 +2,103 @@ body {
     font-family: "Alegreya";
     color: black;
 }
-
 .register-container {
-    display: block;
     margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     text-align: center;
-    height: 550px;
-    min-height: 550px;
     width: 600px;
-    min-width: 600px;
-    padding: 20px;
+    padding: 2%;
 }
-
 .register-header {
     font-size: 40px;
 }
-
 .register-text {
     font-size: 16px;
     text-align: center;
 }
-
 .register-form {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     text-align: center;
     width: 500px;
-    min-width: 500px;
-    padding: 20px;
-    border: 0.5px dashed black;
+    padding: 3%;
+    box-sizing: border-box;
+    border: 0.5px dashed #000;
 }
-
 .register-form .octicon{
     font-size: 12px;
     vertical-align: 6px;
 }
-
 .reg-form-label {
-    display: inline;
     font-size: 15px;
     text-align: right;
     width: 150px;
-    min-width: 150px;
     float: left;
 }
-
 .reg-form-input {
-    color: black;
+    color: #000;
     padding: 2px;
     font-size: 14px;
     font-family: "Alegreya";
     width: 300px;
-    border: none;
-    min-width: 300px;
     vertical-align: 5px;
-    border: 0.5px solid grey;
+    border: 0.5px solid #808080;
 }
-
 .reg-form-input:focus {
     outline: none;
-    color: black;
-    border: 0.5px solid skyblue;
+    color: #000;
+    border: 0.5px solid #87ceeb;
 }
-
 .register-button {
     font-family: "Alegreya";
     font-size: 14px;
     font-weight: bold;
     border: none;
     text-decoration: none;
-    background-color: gold;
+    background-color: #ffd700;
     padding: 6px;
 }
-
 .register-button:focus {
     outline: none;
-    background-color: yellowgreen;
+    background-color: #9acd32;
 }
-
 .register-button:hover {
     border: none;
-    background-color: yellowgreen;
+    background-color: #9acd32;
 }
-
 .validate-error {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     font-family: "Inconsolata";
     width: 250px;
     font-size: 12px;
     border-radius: 2px;
     padding: 4px;
     text-align: center;
-    border: 1px dotted crimson;
+    border: 1px dotted #dc143c;
 }
-
 .validate-error .octicon-x {
     font-size: 11px;
     vertical-align: -0.5px;
-    color: red;
+    color: #ff0000;
 }
-
 .confirm {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     font-family: "Inconsolata";
     font-size: 12px;
-    background-color: black;
+    background-color: #000;
     padding: 2px 1px 2px 1px;
     border-radius: 2px;
     width: 200px;
-    min-width: 200px;
-    color: white;
+    color: #fff;
 }
-
 .confirm .octicon-check {
     font-size: 11px;
     padding: 1px;
-    color: greenyellow;
+    color: #adff2f;
 }
-
 a {
     text-decoration: none;
-    color: deepskyblue;
+    color: #00bfff;
 }
-
 a:hover,:focus {
     border: none;
     outline: none;
