@@ -9,6 +9,8 @@ At the time of writing, the application is hosted on a free-tier instance of Goo
 For handling concurrency, the application runs on top of gunicorn. The front-end of the application is implemented HTML, CSS and a little bit of JavaScript.
 The HTML pages are rendered using the Jinja2 templating engine.
 
+You can run: sudo pip install --upgrade flask flask-login flask-seasurf redis. 
+
 To start the server in production, run startup.sh (change the number of workers for gunicorn accordingly).
 If you have to run a single instance, run server.py with the 'debug' option set to True for local development/testing.
 
