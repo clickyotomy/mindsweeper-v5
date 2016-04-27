@@ -13,5 +13,3 @@ You can run: sudo pip install --upgrade flask flask-login flask-seasurf redis.
 
 To start the server in production, run startup.sh (change the number of workers for gunicorn accordingly).
 If you have to run a single instance, run server.py with the 'debug' option set to True for local development/testing.
-
-Note: The CSS was written in a hurry, so please feel free to refactor it.
